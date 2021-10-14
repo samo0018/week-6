@@ -73,6 +73,13 @@ html {
 
 body{
     background-color: rgb(207, 173, 129);
+
+    /* 
+    Apply a background image 
+    */
+    background-image: url("../images/white_brick_wall.png");
+    /* control how the background repeats */
+    background-repeat: no-repeat;
 }
 
 h1 {
@@ -126,6 +133,18 @@ h1 {
     background-color: rgb(182, 182, 235);
     width: 40vw;
     height: 40vh;
+
+    /* POSITIONING A BACKGROUND: 
+    background-image: url("../images/bread.jpeg");
+    background-position: 40px 20px; /* sets horizontal and vertical image position
+    background-repeat: no-repeat; 
+    */
+
+    /* 
+    background shorthand replaces the individual background properties in one line
+    the order is: colour, url, repeat, position-x, position-y 
+    */
+    background: blue url("../images/bread.jpeg") no-repeat right bottom;
 }
 
 .using-percent {
@@ -156,4 +175,30 @@ h1 {
     text-decoration: underline; /* if you want to tremove the underline from links, set it to none */
 
     list-style: none; /* this removes bullets from a list (but is already in the CSS reset) */
+}
+
+/* apply CSS to multiple elements by listing them w a coma */
+
+.image-contain, .image-cover {
+    border: black 3px solid;
+    width: 50vw;
+    height: 20vh;
+    background-image: url("../images/bread.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* 
+background-size allows you to scale the background 
+either with a fixed value or cover or contain
+*/
+
+.image-contain {
+    /* CONTAIN scales the background image so its always inside the element */
+    background-size: contain;
+}
+
+.image-cover {
+    /* COVER scales the bg image so its always covering the entire element */
+    background-size: cover;
 }
